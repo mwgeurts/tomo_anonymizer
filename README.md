@@ -12,12 +12,9 @@ TomoTherapy is a registered trademark of Accuray Incorporated.
 ### MATLAB Function Use
 
 The following variables are required for proper execution: 
-  varargin{1}: folder to search for archives (relative to the MATLAB
-      path)
-  varargin{2} (optional): integer to use for renaming patients.  The 
-      count will start with this integer, and increment by one for each
-      subsequent archive found.  If not included, the count will start at
-      one.
+
+* varargin{1}: folder to search for archives (relative to the MATLAB path)
+*  varargin{2} (optional): integer to use for renaming patients.  The count will start with this integer, and increment by one for each subsequent archive found.  If not included, the count will start at one.
 
 ### License
 
