@@ -1,25 +1,39 @@
-## TomoTherapy Archive Anonymizer
+TomoTherapy Batch Archive Anonymizer
+===========
 
 by Mark Geurts <mark.w.geurts@gmail.com>
 <br>Copyright &copy; 2014, University of Wisconsin Board of Regents
 
-AnonymizeDatasets scans a folder for TomoTherapy patient archives. For each archive found, the patient's name and MRN are removed, and the folder is renamed.  Patient names/folders will be renamed incrementally (Anon_0001, Anon_0002, etc).
+AnonymizeDatasets scans a folder for TomoTherapy&reg; patient archives. For each archive found, the patient's name and MRN are removed, the archive signature file is deleted, and the folder is renamed.  Patient names/folders will be renamed incrementally (Anon_0001, Anon_0002, etc).
 
 WARNING: THIS WILL MODIFY ALL PATIENT ARCHIVES, RENDERING THEM UNABLE TO RESTORE BACK TO A TOMOTHERAPY DATABASE.
 
 TomoTherapy is a registered trademark of Accuray Incorporated.
 
-### MATLAB Function Use
+## Contents
+
+* [MATLAB Function Use](README.md#matlab-function-use)
+* [Example](README.md#example)
+* [License](README.md#license)
+
+## MATLAB Function Use
 
 The following variables are required for proper execution: 
-  varargin{1}: folder to search for archives (relative to the MATLAB
-      path)
-  varargin{2} (optional): integer to use for renaming patients.  The 
-      count will start with this integer, and increment by one for each
-      subsequent archive found.  If not included, the count will start at
-      one.
 
-### License
+* varargin{1}: folder to search for archives (relative to the MATLAB path)
+*  varargin{2} (optional): integer to use for renaming patients.  The count will start with this integer, and increment by one for each subsequent archive found.  If not included, the count will start at one.
+
+No variables are returned.
+
+## Example
+
+```matlab
+folder = './Archives'; % Folder containing the archives
+startNum = 11; % Start numbering at 11
+AnonymizeDatasets(folder, startNum);
+```
+
+## License
 
 This program is free software: you can redistribute it and/or modify it 
 under the terms of the GNU General Public License as published by the  
