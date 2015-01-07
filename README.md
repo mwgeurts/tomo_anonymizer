@@ -4,7 +4,7 @@ TomoTherapy Batch Archive Anonymizer
 by Mark Geurts <mark.w.geurts@gmail.com>
 <br>Copyright &copy; 2014, University of Wisconsin Board of Regents
 
-AnonymizeDatasets scans a folder for TomoTherapy&reg; patient archives. For each archive found, the patient's name and MRN are removed, and the folder is renamed.  Patient names/folders will be renamed incrementally (Anon_0001, Anon_0002, etc).
+AnonymizeDatasets scans a folder for TomoTherapy&reg; patient archives. For each archive found, the patient's name and MRN are removed, the archive signature file is deleted, and the folder is renamed.  Patient names/folders will be renamed incrementally (Anon_0001, Anon_0002, etc).
 
 WARNING: THIS WILL MODIFY ALL PATIENT ARCHIVES, RENDERING THEM UNABLE TO RESTORE BACK TO A TOMOTHERAPY DATABASE.
 
