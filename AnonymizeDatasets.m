@@ -143,6 +143,9 @@ while i < size(folderList, 1)
         % Delete original file
         delete(fullfile(varargin{1}, folderList(i).name));
         
+        % Delete archive signature
+        delete(fullfile(path, 'archive.sig'));
+        
         %% Rename folder
         % Split subfolders into cell array
         [C, ~] = strsplit(path, '/');
@@ -160,7 +163,7 @@ while i < size(folderList, 1)
         count = count + 1;
         
         % Clear temporary variables
-        clear fid fid2 tline path C;
+        clear fid fid2 tline path C p;
     end
 end
 
