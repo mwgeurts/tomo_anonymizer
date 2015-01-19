@@ -2,7 +2,10 @@ function AnonymizeDatasets(varargin)
 % AnonymizeDatasets scans a folder for TomoTherapy patient archives. For
 % each archive found, the patient's name and MRN are removed, and the
 % folder is renamed.  Patient names/folders will be renamed incrementally
-% (Anon_0001, Anon_0002, etc).
+% (Anon_0001, Anon_0002, etc). Note, the original and new archive names 
+% are recorded using the Event() function to the file log.txt. Therefore, 
+% to remove any connection of the original and anonymized archives, this 
+% file should be deleted following execution.
 %
 % WARNING: THIS WILL MODIFY ALL PATIENT ARCHIVES, RENDERING THEM UNABLE TO
 % RESTORE BACK TO A TOMOTHERAPY DATABASE.
@@ -72,6 +75,7 @@ while i < size(folderList, 1)
         
         % Look through the subfolder contents
         for j = 1:size(subFolderList, 1)
+        
             % If the subfolder content is . or .., skip to next subfolder 
             % in list
             if strcmp(subFolderList(j).name, '.') || ...
@@ -93,6 +97,7 @@ while i < size(folderList, 1)
         
     % Otherwise, if the folder content is a patient archive
     elseif size(strfind(folderList(i).name, '_patient.xml'), 1) > 0
+    
         %% Edit patient XML
         % Log patient XML
         Event(['Found patient archive ', folderList(i).name]);
