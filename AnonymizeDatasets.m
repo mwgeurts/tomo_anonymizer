@@ -18,6 +18,7 @@ function AnonymizeDatasets(varargin)
 %       subsequent archive found.  If not included, the count will start at
 %       one.
 % 
+% Author: Mark Geurts, mark.w.geurts@gmail.com
 % Copyright (C) 2014 University of Wisconsin Board of Regents
 %
 % This program is free software: you can redistribute it and/or modify it 
