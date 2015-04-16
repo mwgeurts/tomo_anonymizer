@@ -133,7 +133,7 @@ while i < size(folderList, 1)
             % Remove patient birthdate, if found
             tline = regexprep(tline, ...
                 '(<patientBirthDate [^>]+>)[^<]+(</patientBirthDate>)', ...
-                '$1$2');
+                '');
             
             % Write line to new XML file
             fprintf(fid2, '%s\n', tline);
