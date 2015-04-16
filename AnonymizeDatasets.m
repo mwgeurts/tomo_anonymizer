@@ -152,6 +152,9 @@ while i < size(folderList, 1)
         % Delete archive signature
         delete(fullfile(path, 'archive.sig'));
         
+        % Delete all PDF files (composite reports)
+        delete(fullfile(path, '*.pdf'));
+        
         %% Rename folder
         % Split subfolders into cell array
         [C, ~] = strsplit(path, '/');
